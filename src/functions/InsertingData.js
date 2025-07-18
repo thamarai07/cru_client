@@ -1,0 +1,25 @@
+import pathfind from "./PathFinder";
+
+export const Inserting = async (data, path) => {
+
+    try {
+        const sub = pathfind(path)
+        const response = await fetch(`http://localhost:5000/insert${sub()}`, {
+            method: "POST", headers: {
+                "Content-type": "application/json"
+            }, body: JSON.stringify(data)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+    } catch (error) {
+        // console.log("Passing path is ", path);
+        
+
+
+        console.error(" Error fetching users:", error.message);
+        return [];
+    }
+};
