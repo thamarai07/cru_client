@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Eye, FilePenLine, Trash } from 'lucide-react';
-import Input from "../component/input"
 import Button from "../component/button"
-import Model from '../component/Usermodel';
 import { useSelector, useDispatch } from 'react-redux';
 import { modelHandler } from '../redux/Modelslice';
 import { FetchAll } from '../functions/FetchAllData';

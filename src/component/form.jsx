@@ -1,8 +1,6 @@
 import React from 'react'
 import Input from './input'
 import Button from './button'
-import { useContext } from 'react'
-import { FromDataContext } from '../Context/FromContext'
 export default function From() {
 
     return (

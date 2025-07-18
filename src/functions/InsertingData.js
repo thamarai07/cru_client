@@ -15,10 +15,7 @@ export const Inserting = async (data, path) => {
         }
 
     } catch (error) {
-        // console.log("Passing path is ", path);
         
-
-
         console.error(" Error fetching users:", error.message);
         return [];
     }
