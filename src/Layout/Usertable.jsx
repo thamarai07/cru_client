@@ -13,7 +13,6 @@ import { useLocation } from 'react-router-dom';
 
 export default function UserTable() {
 
-    const [Search, setSearch] = useState("");
     const [Users, setUsers] = useState([]);
 
     const dispatch = useDispatch();
@@ -63,8 +62,7 @@ export default function UserTable() {
                 <Button text={"Add User"} cls={"w-[140px] bg-black text-white"} type='black' onclick={
                     HandleModel
                 } />
-                <Input placeholder={"Search For User"} change={(e) => Search(e.target.value)} value={Search} cls={"w-[40%]"} type={"text"} />
-                {model && <Model />}
+                
             </div>
             <div className="relative overflow-x-auto mt-10">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

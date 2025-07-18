@@ -13,7 +13,6 @@ import { useLocation } from 'react-router-dom';
 
 export default function RecipeTable() {
 
-    const [Search, setSearch] = useState("");
     const [Recipe, setRecipe] = useState([]);
 
     const dispatch = useDispatch();
@@ -66,8 +65,7 @@ export default function RecipeTable() {
                 <Button text={"Add New Recipe"} cls={"w-[160px] bg-black text-white"} type='black' onclick={
                     HandleModel
                 } />
-                <Input placeholder={"Search For User"} change={(e) => Search(e.target.value)} value={Search} cls={"w-[40%]"} type={"text"} />
-                {model && <Model />}
+              
             </div>
             <div className="relative overflow-x-auto mt-10">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
