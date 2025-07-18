@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Eye, FilePenLine, Trash } from 'lucide-react';
 import Button from "../component/button"
+import Model from '../component/Usermodel';
 import { useSelector, useDispatch } from 'react-redux';
 import { modelHandler } from '../redux/Modelslice';
 import { FetchAll } from '../functions/FetchAllData';
@@ -60,7 +61,7 @@ export default function UserTable() {
                 <Button text={"Add User"} cls={"w-[140px] bg-black text-white"} type='black' onclick={
                     HandleModel
                 } />
-                
+                {model && <Model />}
             </div>
             <div className="relative overflow-x-auto mt-10">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">

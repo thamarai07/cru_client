@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Eye, FilePenLine, Trash } from 'lucide-react';
 import Button from "../component/button"
+import Model from '../component/RecipeModel';
 import { useSelector, useDispatch } from 'react-redux';
 import { modelHandler } from '../redux/Modelslice';
 import { FetchAll } from '../functions/FetchAllData';
@@ -11,6 +12,7 @@ import { useLocation } from 'react-router-dom';
 
 export default function RecipeTable() {
 
+    const [Search, setSearch] = useState("");
     const [Recipe, setRecipe] = useState([]);
 
     const dispatch = useDispatch();
@@ -63,7 +65,7 @@ export default function RecipeTable() {
                 <Button text={"Add New Recipe"} cls={"w-[160px] bg-black text-white"} type='black' onclick={
                     HandleModel
                 } />
-              
+                {model && <Model />}
             </div>
             <div className="relative overflow-x-auto mt-10">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
