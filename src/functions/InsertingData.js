@@ -4,7 +4,7 @@ export const Inserting = async (data, path) => {
 
     try {
         const sub = pathfind(path)
-        const response = await fetch(`http://localhost:5000/insert${sub()}`, {
+        const response = await fetch(`https://cru-server.onrender.com/insert${sub()}`, {
             method: "POST", headers: {
                 "Content-type": "application/json"
             }, body: JSON.stringify(data)

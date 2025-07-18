@@ -4,7 +4,7 @@ import pathfind from "./PathFinder";
 export const FetchAll = async (data) => {
   try {
     const pat = pathfind(data)
-    const response = await fetch(`http://localhost:5000/getall${pat()}`);
+    const response = await fetch(`https://cru-server.onrender.com/getall${pat()}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
